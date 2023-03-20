@@ -5,14 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teachable Machine Image Model with upload</title>
+    <title>Machine Learning</title>
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <img id="imagePreview" style="height: 300px;" />
-    <input id="imageUpload" type="file" />
 
-    <div>Teachable Machine Image Model with upload</div>
-    <div id="label-container"></div>
+<body>
+    <div class="container mt-5 mb-5">
+        <!-- input -->
+        <form action="">
+            <label for="imageUpload" class="drop-container">
+                <span class="drop-title">คลิกในกรอบสี่เหลี่ยม</span> หรือ
+                <input type="file" id="imageUpload" accept="imageUpload/*" required>
+            </label>
+        </form>
+        <!-- show image -->
+        <div class="box">
+            <img id="imagePreview" class="mt-3 mb-3" style="height: 300px;" />
+        </div>
+        <!-- output -->
+        <div class=" m-auto d-block">
+            <div id="label-container" class="fs-5"></div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
@@ -53,22 +68,21 @@
 
                 // หินดินดาน
                 if (shale > sandstone && shale > marble) {
-                    var classPrediction = "หินดินดาน"
+                    var classPrediction = "หินดินดาน<br><br>" + "แหล่งที่มา : โดยทั่วไปแหล่งผลิตหินดินดานส่วนใหญ่จะอยู่ใกล้กับโรงงาน ปูนซีเมนต์ แหล่งผลิตหินดินดานแหล่งใหญ่ คือ จังหวัดสระบุรี รองลงมา คือ จังหวัดนครศรีธรรมราช และลำปาง<br><br>" + "ประโยชน์ : ใช้เป็นวัตถุดิบในอุตสาหกรรมปูนซีเมนต์"
                 }
                 // หินทราย
                 else if (sandstone > shale && sandstone > marble) {
-                    var classPrediction = "หินทราย"
-                } 
+                    var classPrediction = "หินทราย<br><br>" + "แหล่งที่มา : เกิดจากการสะสมตัวของเศษหินดินทราย ที่แตกหลุด และการพังทลายของหินอื่นหรือถูกละลายชะ ล้างมาจากดินหรือหินอื่นๆ แล้วถูกกระแสน้ำหรือกระแสลมทับถมอยู่เป็นชั้นๆ<br><br>" + "ประโยชน์ : ตกแต่งบ้านและสวน"
+                }
                 // หินอ่อน
                 else if (marble > shale && marble > sandstone) {
-                    var classPrediction = "หินอ่อน"
-                } 
+                    var classPrediction = "หินอ่อน<br><br>" + "แหล่งที่มา : เริ่มต้นมาจากหินปูนหรือแคลเซียมคาร์บอเน็ต ที่มีผลึกแร่คัลไซต์เป็นส่วนประกอบหลัก เกิดการทับถมกันเป็นชั้น ประกอบกับความร้อนและแรงดันที่เกิดจากแมกมาของภูเขาไฟใต้ทะเล และปัจจัยสภาพแวดล้อมทางธรณีวิทยาอันหลากหลาย จนเกิดการประสานกันของผลึกภายในตัวหิน ทำให้หินมีลวดลายที่สวยงาม ประกอบด้วยเส้นสีสันต่างๆ อันเป็นเอกลักษณ์เฉพาะตัว<br><br>" + "ประโยชน์ : ใช้เป็นวัสดุก่อสร้างและหินประดับ เช่น ปูพื้นอาคาร, ปูผนัง, ทำขั้นบันได, โต๊ะ, และรูปสลักต่างๆ"
+                }
 
                 labelContainer.childNodes[1].innerHTML = classPrediction;
             }
         }
     </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
         function readURL(input) {
@@ -91,4 +105,5 @@
         });
     </script>
 </body>
+
 </html>
