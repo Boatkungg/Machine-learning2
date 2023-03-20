@@ -1,0 +1,23 @@
+<!---------------------------------------สีฟ้า--------------------------------------->
+<button type="button" class="btn btn-outline-primary">Primary</button>
+
+<!---------------------------------------สีเทา--------------------------------------->
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+
+<!---------------------------------------สีเขียว--------------------------------------->
+<button type="button" class="btn btn-outline-success">Success</button>
+
+<!---------------------------------------สีแดง--------------------------------------->
+<button type="button" class="btn btn-outline-danger">Danger</button>
+
+<!---------------------------------------สีเหลือง--------------------------------------->
+<button type="button" class="btn btn-outline-warning">Warning</button>
+
+<!---------------------------------------สีฟ้าอ่อน--------------------------------------->
+<button type="button" class="btn btn-outline-info">Info</button>
+
+<!---------------------------------------สีขาว--------------------------------------->
+<button type="button" class="btn btn-outline-light">Light</button>
+
+<!---------------------------------------สีดำ--------------------------------------->
+<button type="button" class="btn btn-outline-dark">Dark</button>
