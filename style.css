@@ -1,0 +1,14 @@
+/*          screen           */
+
+canvas {
+    width: 0;
+    display: block;
+    margin: auto;
+}
+
+
+/*          Footer           */
+
+footer {
+    background-color: aqua;
+}
