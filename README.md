@@ -1,1 +1,1 @@
-# Machine learning เรื่องหิน
+# Machine learning
