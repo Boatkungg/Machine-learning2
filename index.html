@@ -24,6 +24,7 @@
         </div>
         <!-- output -->
         <div class=" m-auto d-block">
+            <p id="percent" class="text-center" style="color: rgb(0, 255, 0); padding: 10px;"></p>
             <div id="label-container" class="fs-5"></div>
         </div>
     </div>
@@ -58,6 +59,7 @@
             // predict can take in an image, video or canvas html element
             var image = document.getElementById('imagePreview');
             const prediction = await model.predict(image, false);
+            let percent = document.getElementById("percent")
 
             for (let i = 0; i < maxPredictions; i++) {
                 // หินแต่ละชนิด
@@ -71,18 +73,26 @@
                 // หินดินดาน
                 if (max == shale) {
                     var classPrediction = "ชื่อ : หินดินดาน<br><br>" + "แหล่งที่มา : โดยทั่วไปแหล่งผลิตหินดินดานส่วนใหญ่จะอยู่ใกล้กับโรงงาน ปูนซีเมนต์ แหล่งผลิตหินดินดานแหล่งใหญ่ คือ จังหวัดสระบุรี รองลงมา คือ จังหวัดนครศรีธรรมราช และลำปาง<br><br>" + "ประโยชน์ : ใช้เป็นวัตถุดิบในอุตสาหกรรมปูนซีเมนต์"
+                    // ความถูกต้อง
+                    percent.innerHTML = "ความถูกต้อง : " + shale * 100 + "%"
                 }
                 // หินทราย
                 else if (max == sandstone) {
                     var classPrediction = "ชื่อ : หินทราย<br><br>" + "แหล่งที่มา : เกิดจากการสะสมตัวของเศษหินดินทราย ที่แตกหลุด และการพังทลายของหินอื่นหรือถูกละลายชะ ล้างมาจากดินหรือหินอื่นๆ แล้วถูกกระแสน้ำหรือกระแสลมทับถมอยู่เป็นชั้นๆ<br><br>" + "ประโยชน์ : ตกแต่งบ้านและสวน"
+                    // ความถูกต้อง
+                    percent.innerHTML = "ความถูกต้อง : " + sandstone * 100 + "%"
                 }
                 // หินอ่อน
                 else if (max == marble) {
                     var classPrediction = "ชื่อ : หินอ่อน<br><br>" + "แหล่งที่มา : เริ่มต้นมาจากหินปูนหรือแคลเซียมคาร์บอเน็ต ที่มีผลึกแร่คัลไซต์เป็นส่วนประกอบหลัก เกิดการทับถมกันเป็นชั้น ประกอบกับความร้อนและแรงดันที่เกิดจากแมกมาของภูเขาไฟใต้ทะเล และปัจจัยสภาพแวดล้อมทางธรณีวิทยาอันหลากหลาย จนเกิดการประสานกันของผลึกภายในตัวหิน ทำให้หินมีลวดลายที่สวยงาม ประกอบด้วยเส้นสีสันต่างๆ อันเป็นเอกลักษณ์เฉพาะตัว<br><br>" + "ประโยชน์ : ใช้เป็นวัสดุก่อสร้างและหินประดับ เช่น ปูพื้นอาคาร, ปูผนัง, ทำขั้นบันได, โต๊ะ, และรูปสลักต่างๆ"
+                    // ความถูกต้อง
+                    percent.innerHTML = "ความถูกต้อง : " + marble * 100 + "%"
                 }
                 // ไม่ใช่หิน
                 else if (max == none) {
                     var classPrediction = "ภาพนี้ไม่ใช่หิน<br>โปรดใส่รูปภาพที่มีหิน"
+                    // ไม่แสดงความถูก
+                    percent.innerHTML = ""
                 }
 
                 labelContainer.childNodes[1].innerHTML = classPrediction;
