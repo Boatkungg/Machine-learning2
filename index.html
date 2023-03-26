@@ -24,7 +24,7 @@
         </div>
         <!-- output -->
         <div class=" m-auto d-block">
-            <p id="percent" class="text-center" style="color: rgb(0, 255, 0); padding: 10px;"></p>
+            <p id="percent" class="text-center" style="color: green;"></p>
             <div id="label-container" class="fs-5"></div>
         </div>
     </div>
@@ -69,6 +69,21 @@
                 const none = prediction[3].probability.toFixed(2); // ไม่ใช่หิน
 
                 let max = Math.max(shale,sandstone,marble,none)
+                let rockpercent = max * 100
+
+                // แสดงสีตาม เปอร์เซนต์
+                if (rockpercent <= 80 && rockpercent > 60) {
+                    percent.style.color = "#3eb13e"
+                }
+                else if (rockpercent <= 60 && rockpercent > 40) {
+                    percent.style.color = "orange"
+                }
+                else if (rockpercent <= 40 && rockpercent > 20) {
+                    percent.style.color = "red"
+                }
+                else if (rockpercent <= 20 && rockpercent > 0) {
+                    percent.style.color = "#bc0011"
+                }
 
                 // หินดินดาน
                 if (max == shale) {
