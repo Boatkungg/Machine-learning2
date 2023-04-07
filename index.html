@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Box -->
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5" style="display: block;">
         <!-- input -->
         <form action="">
             <label for="imageUpload" class="drop-container">
@@ -26,6 +28,15 @@
         <div class=" m-auto d-block">
             <p id="percent" class="text-center" style="color: green;"></p>
             <div id="label-container" class="fs-5"></div>
+        </div>
+    </div>
+    <!-- Load -->
+    <div style="display: none;">
+        <div id="load">
+            <div id="reload" style="display: block;">
+                <span class="loader"><span class="loader-inner"></span>
+                </span>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -68,7 +79,7 @@
                 const marble = prediction[2].probability.toFixed(2); // หินอ่อน
                 const none = prediction[3].probability.toFixed(2); // ไม่ใช่หิน
 
-                let max = Math.max(shale,sandstone,marble,none)
+                let max = Math.max(shale, sandstone, marble, none)
                 let rockpercent = max * 100
 
                 // แสดงสีตาม เปอร์เซนต์
