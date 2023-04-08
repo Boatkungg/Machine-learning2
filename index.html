@@ -12,7 +12,7 @@
 
 <body>
     <!-- Box -->
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5" id="screen">
         <!-- input -->
         <form action="">
             <label for="imageUpload" class="drop-container">
@@ -71,11 +71,16 @@
 
         let  openload = document.querySelector(".openload")
         const input = document.getElementById("imageUpload")
+        let screenOutput = document.getElementById("screen")
 
         function Eventload() {
             openload.style.display = "block"
+            screenOutput.style.display = "none"
 
-            setTimeout(() => openload.style.display = 'none', 5000)
+            setTimeout(() => {
+                openload.style.display = 'none'
+                screenOutput.style.display = "block"
+            }, 5000)
         }
 
         input.addEventListener("input", Eventload)
