@@ -12,7 +12,7 @@
 
 <body>
     <!-- Box -->
-    <div class="container mt-5 mb-5" style="display: block;">
+    <div class="container mt-5 mb-5">
         <!-- input -->
         <form action="">
             <label for="imageUpload" class="drop-container">
@@ -31,10 +31,11 @@
         </div>
     </div>
     <!-- Load -->
-    <div style="display: none;">
+    <div class="openload" style="display: none;">
         <div id="load">
             <div id="reload" style="display: block;">
-                <span class="loader"><span class="loader-inner"></span>
+                <span class="loader">
+                    <span class="loader-inner"></span>
                 </span>
             </div>
         </div>
@@ -66,6 +67,20 @@
             }
         }
 
+        // หน้าโหลด
+
+        let  openload = document.querySelector(".openload")
+        const input = document.getElementById("imageUpload")
+
+        function Eventload() {
+            openload.style.display = "block"
+
+            setTimeout(() => openload.style.display = 'none', 5000)
+        }
+
+        input.addEventListener("input", Eventload)
+
+        // Output
         async function predict() {
             // predict can take in an image, video or canvas html element
             var image = document.getElementById('imagePreview');
