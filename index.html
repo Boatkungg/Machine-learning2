@@ -103,7 +103,11 @@
                 let rockpercent = max * 100
 
                 // แสดงสีตาม เปอร์เซนต์
-                if (rockpercent <= 80 && rockpercent > 60) {
+                if (rockpercent > 80 && rockpercent <= 100) {
+                    percent.style.color = "green"
+                }
+
+                else if (rockpercent <= 80 && rockpercent > 60) {
                     percent.style.color = "#3eb13e"
                 }
                 else if (rockpercent <= 60 && rockpercent > 40) {
