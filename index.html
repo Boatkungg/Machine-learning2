@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning</title>
+    <title id="title">Machine Learning</title>
     <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -68,7 +68,7 @@
         }
 
         // หน้าโหลด
-
+        let title = document.getElementById('title')
         let  openload = document.querySelector(".openload")
         const input = document.getElementById("imageUpload")
         let screenOutput = document.getElementById("screen")
@@ -76,10 +76,12 @@
         function Eventload() {
             openload.style.display = "block"
             screenOutput.style.display = "none"
+            title.innerHTML = "กำลังประมวลผล"
 
             setTimeout(() => {
                 openload.style.display = 'none'
                 screenOutput.style.display = "block"
+                title.innerHTML = "Machine Learning"
             }, 8000)
         }
 
