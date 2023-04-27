@@ -1,5 +1,4 @@
-# Machine learning 🧠
-
+# Deep learning 🧠
 
 ### Credit 💾
 <ol>
