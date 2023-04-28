@@ -14,10 +14,11 @@
     <div class="container mt-5 mb-5" id="screen">
         <!-- input -->
         <form action="/file-upload">
-            <label for="imageUpload" class="drop-container">
+            <input type="file" id="imageUpload" accept="imageUpload/*">
+            <!-- <label for="imageUpload" class="drop-container">
                 <span class="drop-title">คลิกในกรอบสี่เหลี่ยม</span> หรือ
-                <input type="file" id="imageUpload" accept="imageUpload/*" required>
-            </label>
+                <input type="file" id="imageUpload" accept="imageUpload/*" style="display: none;" required>
+            </label> -->
         </form>
         <!-- show image -->
         <div class="mb-5 mt-5 carousel-inner">
