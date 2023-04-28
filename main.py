@@ -1,4 +1,5 @@
-from flask import Flask, request
+from flask import Flask, request, flash, redirect
+from werkzeug.utils import secure_filename
 import flask
 import os
 
@@ -10,9 +11,6 @@ ALLOWED_EXTENTIONS = {"png", "jpg", "jpeg"}
 app = Flask(__name__, static_folder="STATIC_FOLDER", template_folder=".", )
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
-
-
-
 @app.route('/')
 def hello_world():
     return flask.render_template('index.html')
@@ -21,13 +19,24 @@ def hello_world():
 def check_allow_file(filename):
     if str(filename).split(".")[-1] in ALLOWED_EXTENTIONS:
         return True
-    else
+    else:
         return False
 
 @app.route("/test", methods=["GET", "POST"])
 def test_index():
     if request.method == "POST":
-        print(request.files)
+        if not "file" in request.files:
+            flash("no file provided")
+            return redirect(request.url)
+
+        image = request.files['file']
+
+        if image.filename == "":
+            flash("no file provided")
+            return redirect(request.url)
+
+        if image and check_allow_file(image.filename):
+            image_name = 
 
     return """
     <!doctype html>
