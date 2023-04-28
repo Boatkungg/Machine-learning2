@@ -21,7 +21,7 @@ def hello_world():
 def check_allow_file(filename):
     if str(filename).split(".")[-1] in ALLOWED_EXTENTIONS:
         return True
-    else
+    else:
         return False
 
 @app.route("/test", methods=["GET", "POST"])
