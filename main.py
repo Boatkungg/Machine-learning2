@@ -83,7 +83,7 @@ def inference(filename):
     label = [i.numpy().decode("utf-8") for i in label]
     
     # TODO: change this in future
-    return redirect(url_for("test_index", label[prediction.numpy().argmax()]))
+    return redirect(url_for("test_index", image=filename, result=label[prediction.numpy().argmax()]))
 
 
 if __name__ == '__main__':
