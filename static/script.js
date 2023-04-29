@@ -2,25 +2,25 @@
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
 // the link to your model provided by Teachable Machine export panel
-// const URL = 'https://teachablemachine.withgoogle.com/models/WZxSXu8P9/';
+const URL = 'https://teachablemachine.withgoogle.com/models/WZxSXu8P9/';
 
-// let model, labelContainer, maxPredictions;
+let model, labelContainer, maxPredictions;
 
-// // Load the image model 
-// async function init() {
-//     const modelURL = URL + 'model.json';
-//     const metadataURL = URL + 'metadata.json';
+// Load the image model 
+async function init() {
+    const modelURL = URL + 'model.json';
+    const metadataURL = URL + 'metadata.json';
 
-//     // load the model and metadata
-//     model = await tmImage.load(modelURL, metadataURL);
-//     maxPredictions = model.getTotalClasses();
+    // load the model and metadata
+    model = await tmImage.load(modelURL, metadataURL);
+    maxPredictions = model.getTotalClasses();
 
-//     labelContainer = document.getElementById('label-container');
-//     for (let i = 0; i < maxPredictions; i++) {
-//         // and class labels
-//         labelContainer.appendChild(document.createElement('div'));
-//     }
-// }
+    labelContainer = document.getElementById('label-container');
+    for (let i = 0; i < maxPredictions; i++) {
+        // and class labels
+        labelContainer.appendChild(document.createElement('div'));
+    }
+}
 
 // ----------------------------------------------------------------------------------------------------
 

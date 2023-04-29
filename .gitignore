@@ -15,7 +15,3 @@ rock_resnet_model/
 
 # venv
 .venv
-
-rock_model/
-image/
-.DS_Store
