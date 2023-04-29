@@ -48,4 +48,3 @@ if img_file is not None:
         color = "purple"
 
     st.markdown(f'### ผลลัพธ์ {label[max_class]} ความเป็นไปได้ <span style="color:{color}"> {percent}% </span>', unsafe_allow_html=True)
-
