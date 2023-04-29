@@ -9,9 +9,9 @@ wheels/
 # model folder
 rock_resnet_model/
 
-pyproject.toml
-.python-version
-*.lock
+/pyproject.toml
+/.python-version
+/*.lock
 
 # venv
 .venv
