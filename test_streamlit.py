@@ -16,7 +16,7 @@ if img_file is not None:
 
     label = [i.numpy().decode("utf-8") for i in label]
 
-    st.image(img_file)
+    st.image(img_file, caption=label[prediction.numpy().argmax()])
     
     fig, ax = plt.subplots()
     ax.barh(label, prediction.numpy().reshape((4,)))
