@@ -12,7 +12,7 @@ with st.spinner("กำลังเริ่มต้น"):
 
 st.title("Rock Classification")
 
-img_file = st.file_uploader("รูปภาพ", type=["png", "jpg", "jpeg"])
+img_file = st.file_uploader("โปรดใส่รูปภาพ", type=["png", "jpg", "jpeg"])
 if img_file is not None:
     img = keras.utils.load_img(img_file, target_size=(224, 224))
     input_array = keras.utils.img_to_array(img)

@@ -13,6 +13,7 @@ rock_resnet_model/
 /.python-version
 /*.lock
 .vscode/
+Test/
 
 # venv
 .venv
