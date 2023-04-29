@@ -15,3 +15,7 @@ pyproject.toml
 
 # venv
 .venv
+
+rock_model/
+image/
+.DS_Store

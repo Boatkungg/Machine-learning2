@@ -3,7 +3,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow import keras
 
-model = tf.saved_model.load("rock_resnet_model")
+model = tf.saved_model.load("rock_resnet")
 
 st.title("Rock Classification")
 
