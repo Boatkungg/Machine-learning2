@@ -3,7 +3,12 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow import keras
 
-model = tf.saved_model.load("rock_resnet_model")
+@st.cache_resource
+def load_model():
+    return tf.saved_model.load("rock_resnet_model")
+
+with st.spinner("กำลังเริ่มต้น"):
+    model = load_model()
 
 st.title("Rock Classification")
 
@@ -42,7 +47,4 @@ if img_file is not None:
     else:
         color = "purple"
 
-    st.markdown(f'### {label[max_class]} การประเมินผล <span style="color:{color}"> {percent}% </span>', unsafe_allow_html=True)
-
-
-    
+    st.markdown(f'### ผลลัพธ์ {label[max_class]} ความเป็นไปได้ <span style="color:{color}"> {percent}% </span>', unsafe_allow_html=True)

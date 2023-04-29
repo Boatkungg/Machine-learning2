@@ -12,6 +12,7 @@ rock_resnet_model/
 /pyproject.toml
 /.python-version
 /*.lock
+.vscode/
 
 # venv
 .venv
