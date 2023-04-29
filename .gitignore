@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+rock_resnet_model/
 
 # venv
 .venv
