@@ -1,0 +1,17 @@
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# model folder
+rock_resnet_model/
+
+pyproject.toml
+.python-version
+*.lock
+
+# venv
+.venv

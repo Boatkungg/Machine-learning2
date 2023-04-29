@@ -43,7 +43,7 @@ def test_index():
             return redirect(request.url)
 
         if image and check_allow_file(image.filename):
-            image_name = secure_filename(f"{round(time())}.{str(image.filename).split(".")[-1]}")
+            image_name = secure_filename(f"{round(time())}.{str(image.filename).split('.')[-1]}")
             image.save(os.path.join(app.config["UPLOAD_FOLDER"], image_name))
             return redirect(url_for('inference', filename=image_name))
 
