@@ -8,6 +8,7 @@ wheels/
 
 # model folder
 rock_resnet_model/
+rock_resnet_model_77/
 
 /pyproject.toml
 /.python-version

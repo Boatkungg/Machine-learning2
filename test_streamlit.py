@@ -5,7 +5,7 @@ from tensorflow import keras
 
 @st.cache_resource
 def load_model():
-    return tf.saved_model.load("rock_resnet_model")
+    return tf.saved_model.load("rock_resnet_model_77")
 
 with st.spinner("กำลังเริ่มต้น"):
     model = load_model()
