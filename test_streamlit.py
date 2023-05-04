@@ -30,10 +30,10 @@ if img_file is not None:
     
     with col2:
         fig, ax = plt.subplots()
-        ax.barh(label, prediction.numpy().reshape((4,)))
+        ax.barh(label, prediction.numpy().reshape((9,)))
         st.pyplot(fig)
 
-    percent = round(prediction.numpy().reshape((4,))[max_class] * 100, 2)
+    percent = round(prediction.numpy().reshape((9,))[max_class] * 100, 2)
 
     color = "purple"
     if percent >= 80:
