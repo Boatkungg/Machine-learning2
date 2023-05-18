@@ -18,3 +18,4 @@ image/
 
 # venv
 .venv
+.DS_Store
