@@ -5,7 +5,7 @@ from tensorflow import keras
 
 @st.cache_resource
 def load_model():
-    return tf.saved_model.load("rock_resnet_model_77")
+    return tf.saved_model.load("rock_resnet_model")
 
 with st.spinner("กำลังเริ่มต้น"):
     model = load_model()
@@ -14,7 +14,7 @@ st.title("Rock Classification")
 
 img_file = st.file_uploader("โปรดใส่รูปภาพ", type=["png", "jpg", "jpeg"])
 if img_file is not None:
-    img = keras.utils.load_img(img_file, target_size=(224, 224))
+    img = keras.utils.load_img(img_file, target_size=(384, 384))
     input_array = keras.utils.img_to_array(img)
 
     with st.spinner("กำลังประมวณผล"):
