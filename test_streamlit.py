@@ -65,16 +65,19 @@ if img_file is not None:
     
     rock_type = label[max_class]
 
-    # หินดินดาน
+    # หิน
     if rock_type != "not_rock":
-        st.markdown(f"""
-        #### ข้อมูล :
-        
-        * ชื่อ : {rock_data[rock_type]["name"]}
+        try:
+            st.markdown(f"""
+            #### ข้อมูล :
 
-        * ประเภท : {rock_data[rock_type]["type"]}
+            * ชื่อ : {rock_data[rock_type]["name"]}
 
-        * แหล่งที่มา : {rock_data[rock_type]["source"]}
+            * ประเภท : {rock_data[rock_type]["type"]}
 
-        * ประโยชน์ : {rock_data[rock_type]["usage"]}
-        """)
+            * แหล่งที่มา : {rock_data[rock_type]["source"]}
+
+            * ประโยชน์ : {rock_data[rock_type]["usage"]}
+            """)
+        except KeyError:
+            pass
