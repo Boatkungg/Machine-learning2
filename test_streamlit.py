@@ -78,6 +78,8 @@ if img_file is not None:
             * แหล่งที่มา : {rock_data[rock_type]["source"]}
 
             * ประโยชน์ : {rock_data[rock_type]["usage"]}
+
+            * แหล่งที่พบในประเทศไทย : {rock_data[rock_type]["location"]}
             """)
         except KeyError:
             pass
