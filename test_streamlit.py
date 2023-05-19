@@ -3,7 +3,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow import keras
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False)
 def load_model():
     return tf.saved_model.load("rock_resnet_model")
 
@@ -12,13 +12,14 @@ with st.spinner("กำลังเริ่มต้น"):
 
 st.title("Rock Classification")
 
-cam_mode = st.checkbox("")
+cam_mode = st.checkbox("โหมดกล้อง")
 
-cam = st.camera_input("Take a picture")
-img_file = st.file_uploader("โปรดใส่รูปภาพ", type=["png", "jpg", "jpeg"])
-if img_file is not None or cam is not None:
-    if cam is not None:
-        img_file = cam
+if cam_mode:
+    img_file = st.camera_input("ถ่ายรูป")
+else:
+    img_file = st.file_uploader("โปรดใส่รูปภาพ", type=["png", "jpg", "jpeg"])
+
+if img_file is not None:
     img = keras.utils.load_img(img_file, target_size=(384, 384))
     input_array = keras.utils.img_to_array(img)
 
