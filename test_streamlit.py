@@ -3,12 +3,20 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow import keras
 
+import json
+
 @st.cache_resource(show_spinner=False)
 def load_model():
     return tf.saved_model.load("rock_resnet_model")
 
+@st.cache_resource(show_spinner=False)
+def load_rock_data():
+    with open("rock_data.json", "r") as jsn_f:
+        return json.load(jsn_f)
+
 with st.spinner("กำลังเริ่มต้น"):
     model = load_model()
+    rock_data = load_rock_data()
 
 st.title("Rock Classification")
 
@@ -58,18 +66,15 @@ if img_file is not None:
     rock_type = label[max_class]
 
     # หินดินดาน
-    if rock_type == "shale":
-        st.markdown("""
+    if rock_type != "not_rock":
+        st.markdown(f"""
         #### ข้อมูล :
         
-        * ชื่อ : หินดินดาน (Shale)
+        * ชื่อ : {rock_data[rock_type]["name"]}
 
-        * แหล่งที่มา : โดยทั่วไปแหล่งผลิตหินดินดานส่วนใหญ่จะอยู่ใกล้กับโรงงาน ปูนซีเมนต์
+        * ประเภท : {rock_data[rock_type]["type"]}
 
-        * แหล่งผลิตหินดินดานแหล่งใหญ่ คือ จังหวัดสระบุรี รองลงมา คือ จังหวัดนครศรีธรรมราช และลำปาง
+        * แหล่งที่มา : {rock_data[rock_type]["source"]}
 
-        * ประโยชน์ : ใช้เป็นวัตถุดิบในอุตสาหกรรมปูนซีเมนต์
+        * ประโยชน์ : {rock_data[rock_type]["usage"]}
         """)
-
-    
-        
