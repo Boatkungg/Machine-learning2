@@ -83,3 +83,8 @@ if img_file is not None:
             """)
         except KeyError:
             pass
+
+    else:
+        st.markdown(f"""
+        #### ภาพนี้ไม่ใช่หิน โปรดใส่รูปภาพที่มีหิน
+        """)
