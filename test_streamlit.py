@@ -28,14 +28,14 @@ else:
     img_file = st.file_uploader("โปรดใส่รูปภาพ", type=["png", "jpg", "jpeg"])
 
 if img_file is not None:
-    img = keras.utils.load_img(img_file, target_size=(384, 384), interpolation="hamming")
+    img = keras.utils.load_img(img_file, target_size=(384, 384), interpolation="hamming", keep_aspect_ratio=True)
     input_array = keras.utils.img_to_array(img)
 
     with st.spinner("กำลังประมวณผล"):   
         # some black magic here
         prediction_list = []
         prediction_raw = []
-        for _ in range(10):
+        for _ in range(1):
             prediction, label = model(input_array)
             prediction_list.append(prediction.numpy().argmax())
             prediction_raw.append(prediction.numpy().reshape((9,)))
