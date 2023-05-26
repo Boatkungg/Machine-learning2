@@ -4,8 +4,42 @@
         "bracelet": {
 
             "store1": {
-                "time": "Bracelet",
-                "price": 100
+                "time": "26-05",
+                "price": 129
+            },
+
+            "store2": {
+                "time": "15-04",
+                "price": 150,
+
+                "time1": "10-04",
+                "price1": 111
+            },
+
+            "store3": {
+                "time": "22-05",
+                "price": 189,
+
+                "time1": "20-05",
+                "price1": 169,
+
+                "time2": "18-05",
+                "price2": 209,
+
+                "time3": "09-05",
+                "price3": 229,
+
+                "time4": "30-04",
+                "price4": 205,
+
+                "time5": "19-04",
+                "price5": 189,
+
+                "time6": "14-04",
+                "price6": 165,
+
+                "time7": "11-04",
+                "price7": 185
             }
 
         },
