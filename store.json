@@ -1,0 +1,32 @@
+{
+    "sandstone": {
+
+        "bracelet": {
+
+            "store1": {
+                "time": "Bracelet",
+                "price": 100
+            }
+
+        },
+
+        "sculpture": {
+                
+            "store1": {
+                "time": "Sculpture",
+                "price": 100
+            }
+    
+        },
+
+        "wall": {
+                    
+            "store1": {
+                "time": "Wall",
+                "price": 100
+            }
+        
+        }
+
+    }
+}
