@@ -48,19 +48,39 @@
                 
             "store1": {
                 "time": "14-05",
-                "price": 90
+                "price": 90,
+
+                "time1": "10-05",
+                "price1": 75,
+
+                "time2": "04-05",
+                "price2": 80,
+
+                "time3": "07-04",
+                "price3": 92
             },
 
             "store2": {
-                "time": "10-05",
-                "price": 75
+                "time": "04-05",
+                "price": 79,
+
+                "time1": "07-04",
+                "price1": 81
             },
 
             "store3": {
-                "time": "04-05",
-                "price": 80
+                "time": "10-05",
+                "price": 61,
+
+                "time1": "20-04",
+                "price1": 62,
+
+                "time2": "08-04",
+                "price2": 61,
+
+                "time3": "04-03",
+                "price3": 61
             }
-    
         },
 
         "wall": {
