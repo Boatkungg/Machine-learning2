@@ -81,15 +81,6 @@
                 "time3": "04-03",
                 "price3": 61
             }
-        },
-
-        "wall": {
-                    
-            "store1": {
-                "time": "Wall",
-                "price": 100
-            }
-        
         }
 
     }
