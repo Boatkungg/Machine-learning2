@@ -47,8 +47,18 @@
         "sculpture": {
                 
             "store1": {
-                "time": "Sculpture",
-                "price": 100
+                "time": "14-05",
+                "price": 90
+            },
+
+            "store2": {
+                "time": "10-05",
+                "price": 75
+            },
+
+            "store3": {
+                "time": "04-05",
+                "price": 80
             }
     
         },
