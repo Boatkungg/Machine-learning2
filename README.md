@@ -1,8 +1,7 @@
 # Deep learning 🧠
 
 ### Credit 💾
-<ol>
-    <li><a href="https://github.com/TK17250">TK</a></li>
-    <li><a href="https://github.com/PLAYGAMERTH">Playgamer TH</a></li>
-    <li><a href="https://github.com/l3oatkunGG">B_K</a></li>
-</ol>
+1. [TK](https://github.com/TK17250)
+2. [Playgamer TH](https://github.com/TK17250)
+3. [B_K](https://github.com/l3oatkunGG)
+4. [DianaV797](https://github.com/DianaV797)
