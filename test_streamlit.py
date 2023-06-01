@@ -103,4 +103,36 @@ if img_file is not None:
         """)
 
     if rock_type != "not_rock":
-        pass
+        for items in store_data[rock_type].keys():
+            item = store_data[rock_type][items]
+
+            item_list = []
+            for store_no in item.keys():
+                for time_price in item[store_no]:
+                    item_list.append((time_price["time"], time_price["price"]))
+
+            item_list.sort(key=lambda x: "-".join(list(reversed(x[0].split("-")))))
+
+            # remove the duplicate 
+            # TODO: keep the lowest price
+            item_list = list(dict.fromkeys(item_list))
+            fig_2, ax_2 = plt.subplots()
+            ax_2.plot([i[0] for i in item_list], [i[1] for i in item_list])
+
+            with st.expander("ตัวอย่างสินค้า"):
+                col3, col4 = st.columns(2)
+                with col4:
+                    st.pyplot(fig_2)
+
+                with col3:
+                    st.markdown(f"""
+                    #### {items}
+                    ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท
+
+                    ราคาสูงสุด : {max([i[1] for i in item_list])} บาท
+
+                    ราคาปัจจุบัน : {item_list[-1][1]} บาท
+
+                    ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท
+                    """)
+            
