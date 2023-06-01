@@ -14,9 +14,15 @@ def load_rock_data():
     with open("rock_data.json", "r") as jsn_f:
         return json.load(jsn_f)
 
+@st.cache_resource(show_spinner=False)
+def load_store_data():
+    with open("store.json", "r") as jsn_f:
+        return json.load(jsn_f)
+
 with st.spinner("กำลังเริ่มต้น"):
     model = load_model()
     rock_data = load_rock_data()
+    store_data = load_store_data()
 
 st.title("Rock Classification")
 
@@ -95,3 +101,6 @@ if img_file is not None:
         st.markdown(f"""
         #### ภาพนี้ไม่ใช่หิน โปรดใส่รูปภาพที่มีหิน
         """)
+
+    if rock_type != "not_rock":
+        pass
