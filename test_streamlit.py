@@ -9,12 +9,12 @@ import json
 def load_model():
     return tf.saved_model.load("rock_resnet_model")
 
-@st.cache_resource(show_spinner=False)
+@st.cache_data(show_spinner=False)
 def load_rock_data():
     with open("rock_data.json", "r") as jsn_f:
         return json.load(jsn_f)
 
-@st.cache_resource(show_spinner=False)
+@st.cache_data(show_spinner=False)
 def load_store_data():
     with open("store.json", "r") as jsn_f:
         return json.load(jsn_f)
