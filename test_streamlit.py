@@ -102,7 +102,9 @@ if img_file is not None:
         #### ภาพนี้ไม่ใช่หิน โปรดใส่รูปภาพที่มีหิน
         """)
 
-    if rock_type != "not_rock":
+    if rock_type not in  ["not_rock", "shale"]:
+        st.markdown(f"#### การนำมาผลิตและส่งออกขาย : ")
+
         for items in store_data[rock_type].keys():
             item = store_data[rock_type][items]
 
@@ -117,9 +119,9 @@ if img_file is not None:
             # TODO: keep the lowest price
             item_list = list(dict.fromkeys(item_list))
             fig_2, ax_2 = plt.subplots()
-            ax_2.plot([i[0] for i in item_list], [i[1] for i in item_list])
+            ax_2.hist([i[1] for i in item_list], bins=20)
 
-            with st.expander("ตัวอย่างสินค้า"):
+            with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
                 col3, col4 = st.columns(2)
                 with col4:
                     st.pyplot(fig_2)
@@ -127,12 +129,12 @@ if img_file is not None:
                 with col3:
                     st.markdown(f"""
                     #### {items}
-                    ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท
+                    <span style="color: #FA3C3C"> ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท </span>
 
-                    ราคาสูงสุด : {max([i[1] for i in item_list])} บาท
+                    <span style="color: #23B613"> ราคาสูงสุด : {max([i[1] for i in item_list])} บาท </span>
 
                     ราคาปัจจุบัน : {item_list[-1][1]} บาท
 
-                    ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท
-                    """)
+                    <span style="color: #00D5FF"> ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท </span>
+                    """, unsafe_allow_html=True)
             
