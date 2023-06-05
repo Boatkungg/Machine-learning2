@@ -102,7 +102,7 @@ if img_file is not None:
         #### ภาพนี้ไม่ใช่หิน โปรดใส่รูปภาพที่มีหิน
         """)
 
-    if rock_type not in  ["not_rock", "shale", "limestone"]:
+    if rock_type not in  ["not_rock", "shale", "limestone", "basalt"]:
         st.markdown(f"#### การนำมาผลิตและส่งออกขาย : ")
 
         for items in store_data[rock_type].keys():
