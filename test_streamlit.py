@@ -119,7 +119,15 @@ if img_file is not None:
             # TODO: keep the lowest price
             item_list = list(dict.fromkeys(item_list))
             fig_2, ax_2 = plt.subplots()
-            ax_2.hist([i[1] for i in item_list], bins=20)
+            # TODO: fig_2.patch.set_visible(False)
+            prices = [i[1] for i in item_list]
+            ax_2.plot(prices, marker="o", color="lime")
+            # ax_2.fill_between(x=len(prices),
+            #         y1=prices,
+            #         y2=[0] * len(prices),
+            #         color=color,
+            #         alpha=0.1)
+            # TODO: ax_2.set_axis_off()
 
             with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
                 col3, col4 = st.columns(2)
