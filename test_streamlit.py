@@ -1,6 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 from tensorflow import keras
 
 import json
@@ -119,10 +120,10 @@ if img_file is not None:
             # TODO: keep the lowest price
             item_list = list(dict.fromkeys(item_list))
             fig_2, ax_2 = plt.subplots()
-            prices = [i[1] for i in item_list]
-            ax_2.plot(prices, marker="o", color="green")
-            fig_2.set_facecolor('white')
-            ax_2.set_facecolor('none')
+            prices = [i[1] for i in item_list] # ราคา
+            ax_2.plot(prices, marker="o", color="green") # ตัวกราฟ
+            fig_2.set_facecolor('white') # พื้นหลังนอกกราฟ
+            ax_2.set_facecolor('none') # พื้นหลังในกราฟ
 
             with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
                 col3, col4 = st.columns(2)
