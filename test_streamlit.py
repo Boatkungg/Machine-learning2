@@ -60,7 +60,8 @@ if img_file is not None:
         for param in ['text.color', 'axes.labelcolor', 'ytick.color', 'xtick.color']:
                 plt.rcParams[param] = '0.9'
         fig, ax = plt.subplots()
-        ax.set_facecolor('#212946')
+        fig.set_facecolor('#212946')
+        ax.set_facecolor("#212946")
         ax.barh(label, prediction)
         ax.grid(color='#2A3459')
         st.pyplot(fig)
