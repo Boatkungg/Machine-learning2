@@ -1,8 +1,8 @@
 import streamlit as st
 import tensorflow as tf
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
 from tensorflow import keras
+import pandas as pd
 
 import json
 
@@ -57,8 +57,12 @@ if img_file is not None:
         st.image(img, caption=label[max_class])
     
     with col2:
+        for param in ['text.color', 'axes.labelcolor', 'ytick.color', 'xtick.color']:
+                plt.rcParams[param] = '0.9'
         fig, ax = plt.subplots()
+        ax.set_facecolor('#212946')
         ax.barh(label, prediction)
+        ax.grid(color='#2A3459')
         st.pyplot(fig)
 
     percent = round(prediction[max_class] * 100, 2)
@@ -118,12 +122,20 @@ if img_file is not None:
 
             # remove the duplicate 
             # TODO: keep the lowest price
+            plt.style.use("seaborn-dark") # สไตล์กราฟ
+            # สีขอบกราฟ
+            for param in ['text.color', 'axes.labelcolor', 'ytick.color']:
+                plt.rcParams[param] = '0.9'
+            # สีพแกน x
+            for param in ['xtick.color', 'legend.facecolor', 'legend.edgecolor']:
+                plt.rcParams[param] = '#212946'
             item_list = list(dict.fromkeys(item_list))
             fig_2, ax_2 = plt.subplots()
             prices = [i[1] for i in item_list] # ราคา
-            ax_2.plot(prices, marker="o", color="green") # ตัวกราฟ
-            fig_2.set_facecolor('white') # พื้นหลังนอกกราฟ
-            ax_2.set_facecolor('none') # พื้นหลังในกราฟ
+            ax_2.plot(prices, marker="o", color="#08F7FE") # ตัวกราฟ
+            fig_2.set_facecolor('#212946') # พื้นหลังนอกกราฟ
+            ax_2.set_facecolor('#212946') # พื้นหลังในกราฟ
+            ax_2.grid(color='#2A3459') # พื้นหลังตาราง
 
             with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
                 col3, col4 = st.columns(2)
