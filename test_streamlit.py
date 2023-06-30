@@ -146,12 +146,12 @@ if img_file is not None:
                 with col3:
                     st.markdown(f"""
                     #### {items}
-                    <span style="color: #FA3C3C"> ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท </span>
-
                     <span style="color: #23B613"> ราคาสูงสุด : {max([i[1] for i in item_list])} บาท </span>
+
+                    <span style="color: #ff0000"> ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท </span>
 
                     ราคาปัจจุบัน : {item_list[-1][1]} บาท
 
-                    <span style="color: #00D5FF"> ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท </span>
+                    <span style="color: #008eff"> ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท </span>
                     """, unsafe_allow_html=True)
             
