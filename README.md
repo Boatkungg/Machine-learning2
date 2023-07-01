@@ -1,4 +1,4 @@
-# Deep learning 🧠
+# Rock Classification 🧠 🪨
 
 ## Library 📚
 1. Tensorflow

@@ -1,187 +1,69 @@
 {
     "sandstone": {
 
-        "กำไล": {
+        "กำไล(ขนาด 17 ซม.)": {
 
-            "store1": [
-                {
-                    "time": "26-05",
-                    "price": 129
-                }
+            "shop": [
+                "ร้าน All One Shops",
+                "ร้าน กำไลหินร้านถังเงิน",
+                "ร้าน Aomthong"
             ],
 
-            "store2": [
-                {
-                    "time": "15-04",
-                    "price": 150
-                },
+            "store1": {
+                "link": "https://www.lazada.co.th/products/8-i231059784-s353873308.html?",
+                "price": 165
+            },
 
-                {
-                    "time": "10-04",
-                    "price": 111
-                }
-            ],
+            "store2": {
+                "link": "https://www.lazada.co.th/products/gold-sand-stone-8-i3740033444-s14193000202.html?",
+                "price": 99
+            },
 
-            "store3": [
-                {
-                    "time": "22-05",
-                    "price": 189
-                },
-
-                {
-                    "time": "20-05",
-                    "price": 169
-                },
-
-                {
-                    "time": "18-05",
-                    "price": 209
-                },
-
-                {
-                    "time": "09-05",
-                    "price": 229
-                },
-
-                {
-                    "time": "30-04",
-                    "price": 205
-                },
-
-                {
-                    "time": "19-04",
-                    "price": 189
-                },
-
-                {
-                    "time": "14-04",
-                    "price": 165
-                },
-
-                {
-                    "time": "11-04",
-                    "price": 185
-                }
-            ]
+            "store3": {
+                "link": "https://www.lazada.co.th/products/8-gold-sand-stone-by-i1554440973-s15566009199.html?",
+                "price": 99
+            }
 
         },
 
-        "งานปั้น": {
+        "รูปปั้นพระพุทธรูป(ขนาด 7.5x5x11 ซม.)": {
+
+            "map": "https://goo.gl/maps/GhVWKrX8ESGgwmKCA",
                 
-            "store1": [
-                {
-                    "time": "14-05",
-                    "price": 90
-                },
+            "store1": {
+                "link": "https://www.lazada.co.th/products/vintage-i2349803296-s7937085576.html?",
+                "price": 77
+            },
 
-                {
-                    "time": "10-05",
-                    "price": 75
-                },
+            "store2": {
+                "link": "https://www.lazada.co.th/products/newest-i3892122101-s14930438225.html?",
+                "price": 83
+            },
 
-                {
-                    "time": "04-05",
-                    "price": 80
-                },
-
-                {
-                    "time": "07-04",
-                    "price": 92
-                }
-            ],
-
-            "store2": [
-                {
-                    "time": "04-05",
-                    "price": 79
-                },
-
-                {
-                    "time": "07-04",
-                    "price": 81
-                }
-            ],
-
-            "store3": [
-                {
-                    "time": "10-05",
-                    "price": 61
-                },
-
-                {
-                    "time": "20-04",
-                    "price": 62
-                },
-
-                {
-                    "time": "08-04",
-                    "price": 61
-                },
-
-                {
-                    "time": "04-03",
-                    "price": 61
-                }
-            ]
+            "store3": {
+                "link": "https://www.lazada.co.th/products/lazaralives-i4024962466-s15632488826.html?",
+                "price": 129
+            }
         },
 
-        "ผนัง": {
+        "ผนัง(สีเหลืองทอง, ขนาดแผ่น 5x20 ซม.)": {
+
+            "map": "https://goo.gl/maps/BksSRhSNWsWHQqu6A",
                     
-            "store1": [
-                {
-                    "time": "22-05",
-                    "price": 570
-                },
+            "store1": {
+                "link": "https://shopee.co.th/product/267099681/12151950475",
+                "price": 575
+            },
+            
+            "store2": {
+                "link": "https://www.hinkorat.com/product/18/",
+                "price": 247
+            },
 
-                {
-                    "time": "07-05",
-                    "price": 565
-                }
-            ],
-
-            "store2": [
-                {
-                    "time": "02-05",
-                    "price": 530
-                },
-
-                {
-                    "time": "01-04",
-                    "price": 530
-                },
-
-                {
-                    "time": "10-03",
-                    "price": 530
-                }
-            ],
-
-            "store3": [
-                {
-                    "time": "08-05",
-                    "price": 575
-                },
-
-                {
-                    "time": "07-05",
-                    "price": 598
-                },
-
-                {
-                    "time": "01-04",
-                    "price": 575
-                },
-
-                {
-                    "time": "12-03",
-                    "price": 575
-                },
-
-                {
-                    "time": "07-03",
-                    "price": 598
-                }
-            ]
+            "store3": {
+                "link": "https://nocnoc.com/p/Products/SAHAMIT-%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%A2-%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%9C%E0%B8%99%E0%B8%B1%E0%B8%87-%E0%B8%88%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%99-5-%E0%B8%A1%E0%B8%B1%E0%B8%94-25-%E0%B9%81%E0%B8%9C%E0%B9%88%E0%B8%99-0.25%E0%B8%95%E0%B8%A3%E0%B8%A1.-%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%AD%E0%B8%87/10556954?utm_source=google_pmax&utm_medium=paid&utm_campaign=%7cpl:pmax%7cfn:conversion%7ccn:pmax_all%7c",
+                "price": 380
+            }
         
         }
 
