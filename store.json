@@ -71,136 +71,45 @@
 
     "marble": {
 
-        "กระเบื้อง": {
-            "store1": [
-                {
-                    "time": "02-05",
-                    "price": 792
-                },
+        "กระเบื้อง(สีขาว, ขนาด 40x40 ซม.)": {
 
-                {
-                    "time": "01-05",
-                    "price": 554
-                },
+            "map": "https://goo.gl/maps/5pLteMKTq2YDkC4F8",
 
-                {
-                    "time": "06-04",
-                    "price": 554
-                },
+            "store1": {
+                "link": "https://www.cottolife.com/th/tiles/design/marble-collection/sa-n-16x16-hin-on-white-r-a.html?pzclickid=r-th--300972--f076fc64c32840e7b6e3c6ba325d1306--159344101f8ae89",
+                "price": 195
+            },
 
-                {
-                    "time": "01-04",
-                    "price": 792
-                },
+            "store2": {
+                "link": "https://www.boonthavorn.com/sosuco-1029331?utm_source=priceza&utm_medium=priceza&utm_campaign=01092022-sep-2022_priceza-boonthavornr-th--300783--f076fc64c32840e7b6e3c6ba325d1306--159344101f8ae89&utm_content=productgroup__priceza&pzclickid=r-th--300783--f076fc64c32840e7b6e3c6ba325d1306--159344101f8ae89",
+                "price": 199
+            },
 
-                {
-                    "time": "14-03",
-                    "price": 554
-                },
+            "store3": {
+                "link": "https://nocnoc.com/p/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%8B%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%B4%E0%B8%81%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B9%80%E0%B8%A5%E0%B8%99/GRANDHOMEMART%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99SOSUCO16x16%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%82%E0%B8%B2%E0%B8%A7A%E0%B8%AA%E0%B8%B5%E0%B8%82%E0%B8%B2%E0%B8%A7/10819240?utm_source=priceza.com&utm_medium=cpc-priceza&utm_campaign=priceza-NocNoc|r-th--300617--f076fc64c32840e7b6e3c6ba325d1306--159344101f8ae89&utm_content=productgroup__priceza&pzclickid=r-th--300617--f076fc64c32840e7b6e3c6ba325d1306--159344101f8ae89",
+                "price": 219
+            }
 
-                {
-                    "time": "01-03",
-                    "price": 792
-                }
-            ],
-
-            "store2": [
-                {
-                    "time": "06-05",
-                    "price": 603
-                },
-
-                {
-                    "time": "05-04",
-                    "price": 603
-                },
-
-                {
-                    "time": "05-03",
-                    "price": 603
-                }
-            ],
-
-            "store3": [
-                {
-                    "time": "11-05",
-                    "price": 660
-                },
-
-                {
-                    "time": "10-04",
-                    "price": 660
-                },
-
-                {
-                    "time": "25-03",
-                    "price": 660
-                }
-            ]
         },
 
-        "โต๊ะ": {
+        "โต๊ะ(สีดำ, ขนาด 80x60 ซม.)": {
 
-            "store1": [
-                {
-                    "time": "29-05",
-                    "price": 2189
-                },
+            "map": "https://goo.gl/maps/mpa8Qkokj8AfyjNy6",
 
-                {
-                    "time": "23-05",
-                    "price": 2431
-                },
+            "store1": {
+                "link": "https://shopee.co.th/AiHome-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%82%E0%B8%81-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%B2-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%B2-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%82%E0%B8%81-%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%A1-%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%95%E0%B9%87%E0%B8%AD%E0%B8%81-i.291372238.17470414355?sp_atk=1aafb98c-3471-4b79-955d-3ad3eca4a39c&xptdk=1aafb98c-3471-4b79-955d-3ad3eca4a39c",
+                "price": 1225
+            },
 
-                {
-                    "time": "18-05",
-                    "price": 2189
-                },
+            "store2": {
+                "link": "https://shopee.co.th/Living-room-table-round-coffee-Tea-table-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B9%81%E0%B8%9F-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%8A%E0%B8%B2-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%A1-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%82%E0%B8%81%E0%B8%A7%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%A1-%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B8%82%E0%B8%B2%E0%B8%A7-%E0%B8%94%E0%B8%B3-i.493239265.20724533180?sp_atk=67df714a-f822-4cb5-9a75-8cf92d30e573&xptdk=67df714a-f822-4cb5-9a75-8cf92d30e573",
+                "price": 1178
+            },
 
-                {
-                    "time": "17-04",
-                    "price": 2511
-                }
-            ],
-
-            "store2": [
-                {
-                    "time": "30-05",
-                    "price": 2575
-                },
-
-                {
-                    "time": "30-04",
-                    "price": 2575
-                }
-            ],
-
-            "store3": [
-                {
-                    "time": "29-05",
-                    "price": 2056
-                },
-
-                {
-                    "time": "18-08",
-                    "price": 2199
-                },
-
-                {
-                    "time": "06-05",
-                    "price": 2056
-                },
-
-                {
-                    "time": "01-05",
-                    "price": 2056
-                },
-
-                {
-                    "time": "27-04",
-                    "price": 2163
-                }
-            ]
+            "store3": {
+                "link": "https://shopee.co.th/WoodMall-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%82%E0%B8%81-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%B2-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%8B%E0%B8%9F%E0%B8%B2-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B9%81%E0%B8%82%E0%B8%81-%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%AD%E0%B9%88%E0%B8%AD%E0%B8%99-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87-%E0%B9%82%E0%B8%95%E0%B9%8A%E0%B8%B0%E0%B8%81%E0%B8%A5%E0%B8%A1-%E0%B8%AA%E0%B8%B4%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%95%E0%B9%87%E0%B8%AD%E0%B8%81-i.953802878.19474602967?sp_atk=c6d5604a-9148-43e2-90c7-12aa97fd9a44&xptdk=c6d5604a-9148-43e2-90c7-12aa97fd9a44",
+                "price": 1225
+            }
 
         }
 
