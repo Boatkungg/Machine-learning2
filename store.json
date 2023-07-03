@@ -191,135 +191,24 @@
 
     "slate": {
 
-        "แผ่นหิน": {
+        "แผ่นหิน(ขนาด 20x30 ซม.)": {
 
-            "store1": [
+            "map": "https://goo.gl/maps/DBg4CuGTcAJhJvRY8",
 
-                {
-                    "time": "03-06",
-                    "price": 299
-                },
+            "store1": {
+                "link": "https://www.lazada.co.th/products/natural-stone-plate-i4093797366-s15986091494.html?",
+                "price": 140
+            },
 
-                {
-                    "time": "01-06",
-                    "price": 309
-                },
+            "store2": {
+                "link": "https://shopee.co.th/product/88391669/8722102463",
+                "price": 245
+            },
 
-                {
-                    "time": "23-05",
-                    "price": 299
-                },
-
-                {
-                    "time": "19-05",
-                    "price": 309
-                }
-
-            ],
-
-            "store2": [
-
-                {
-                    "time": "01-06",
-                    "price": 245
-                },
-
-                {
-                    "time": "06-05",
-                    "price": 245
-                },
-
-                {
-                    "time": "02-04",
-                    "price": 245
-                }
-
-            ],
-
-            "store3": [
-                    
-                    {
-                        "time": "01-06",
-                        "price": 330
-                    },
-    
-                    {
-                        "time": "01-05",
-                        "price": 330
-                    },
-    
-                    {
-                        "time": "01-04",
-                        "price": 330
-                    }
-    
-            ]
-
-        },
-
-        "กระดานชนวน": {
-
-            "store1": [
-
-                {
-                    "time": "05-06",
-                    "price": 150
-                },
-
-                {
-                    "time": "03-06",
-                    "price": 250
-                },
-
-                {
-                    "time": "01-06",
-                    "price": 250
-                }
-
-            ],
-
-            "store2": [
-                    
-                    {
-                        "time": "02-06",
-                        "price": 150
-                    },
-    
-                    {
-                        "time": "01-05",
-                        "price": 150
-                    },
-    
-                    {
-                        "time": "01-04",
-                        "price": 150
-                    }
-    
-            ],
-
-            "store3": [
-
-                {
-                    "time": "01-06",
-                    "price": 290
-                },
-
-                {
-                    "time": "01-05",
-                    "price": 290
-                },
-
-                {
-                    "time": "02-04",
-                    "price": 290
-                },
-
-                {
-                    "time": "07-03",
-                    "price": 290
-                }
-
-            ]
+            "store3": {
+                "link": "https://www.lazada.co.th/products/rectangular-slate-platters-i2849106988-s10394645997.html?",
+                "price": 150
+            }
 
         }
 
