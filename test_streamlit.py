@@ -110,48 +110,38 @@ if img_file is not None:
 
     if rock_type not in  ["not_rock", "shale", "limestone", "basalt"]:
         st.markdown(f"#### การนำมาผลิตและส่งออกขาย : ")
+        for items in store_data[rock_type]:
+            if "shop" in items:
+                show_type = "shop"
+            elif "map" in items:
+                show_type = "map"
+            else:
+                show_type = None
 
-        for items in store_data[rock_type].keys():
-            item = store_data[rock_type][items]
+            loop_store = list(store_data[rock_type][items].keys())
+            # ['shop', 'store1', 'store2', 'store3']
+            if show_type is not None:
+                loop_store.remove(show_type)
+            print(loop_store)
+            link_and_price = [(items[store]["link"], items[store]["price"]) for store in loop_store]
+            link_and_price = sorted(link_and_price, key=lambda x: x[1])
 
-            item_list = []
-            for store_no in item.keys():
-                for time_price in item[store_no]:
-                    item_list.append((time_price["time"], time_price["price"]))
+            print(link_and_price)
+            
+            # with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
+            #     col3, col4 = st.columns(2)
+            #     with col4:
+            #         # st.pyplot(fig_2)
 
-            item_list.sort(key=lambda x: "-".join(list(reversed(x[0].split("-")))))
+            #     with col3:
+            #         st.markdown(f"""
+            #         #### {items}
+            #         <span style="color: #23B613"> ราคาสูงสุด : {max([i[1] for i in item_list])} บาท </span>
 
-            # remove the duplicate 
-            # TODO: keep the lowest price
-            plt.style.use("seaborn-dark") # สไตล์กราฟ
-            # สีขอบกราฟ
-            for param in ['text.color', 'axes.labelcolor', 'ytick.color']:
-                plt.rcParams[param] = '0.9'
-            # สีพแกน x
-            for param in ['xtick.color', 'legend.facecolor', 'legend.edgecolor']:
-                plt.rcParams[param] = '#212946'
-            item_list = list(dict.fromkeys(item_list))
-            fig_2, ax_2 = plt.subplots()
-            prices = [i[1] for i in item_list] # ราคา
-            ax_2.plot(prices, marker="o", color="#08F7FE") # ตัวกราฟ
-            fig_2.set_facecolor('#212946') # พื้นหลังนอกกราฟ
-            ax_2.set_facecolor('#212946') # พื้นหลังในกราฟ
-            ax_2.grid(color='#2A3459') # พื้นหลังตาราง
+            #         <span style="color: #ff0000"> ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท </span>
 
-            with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
-                col3, col4 = st.columns(2)
-                with col4:
-                    st.pyplot(fig_2)
+            #         ราคาปัจจุบัน : {item_list[-1][1]} บาท
 
-                with col3:
-                    st.markdown(f"""
-                    #### {items}
-                    <span style="color: #23B613"> ราคาสูงสุด : {max([i[1] for i in item_list])} บาท </span>
-
-                    <span style="color: #ff0000"> ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท </span>
-
-                    ราคาปัจจุบัน : {item_list[-1][1]} บาท
-
-                    <span style="color: #008eff"> ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท </span>
-                    """, unsafe_allow_html=True)
+            #         <span style="color: #008eff"> ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท </span>
+            #         """, unsafe_allow_html=True)
             
