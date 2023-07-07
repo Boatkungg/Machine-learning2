@@ -111,37 +111,50 @@ if img_file is not None:
     if rock_type not in  ["not_rock", "shale", "limestone", "basalt"]:
         st.markdown(f"#### การนำมาผลิตและส่งออกขาย : ")
         for items in store_data[rock_type]:
-            if "shop" in items:
+            store_list = list(store_data[rock_type][items].keys())
+
+            if "shop" in store_list:
                 show_type = "shop"
-            elif "map" in items:
+            elif "map" in store_list:
                 show_type = "map"
             else:
                 show_type = None
 
-            loop_store = list(store_data[rock_type][items].keys())
-            # ['shop', 'store1', 'store2', 'store3']
             if show_type is not None:
-                loop_store.remove(show_type)
-            print(loop_store)
-            link_and_price = [(items[store]["link"], items[store]["price"]) for store in loop_store]
+                store_list.remove(show_type)
+    
+            link_and_price = [(store_data[rock_type][items][store]["link"], store_data[rock_type][items][store]["price"]) for store in store_list]
             link_and_price = sorted(link_and_price, key=lambda x: x[1])
 
-            print(link_and_price)
+            lowest_price = link_and_price[0][1]
+            lowest_price_link = link_and_price[0][0]
+
+            highest_price = link_and_price[-1][1]
+            highest_price_link = link_and_price[-1][0]
             
-            # with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
-            #     col3, col4 = st.columns(2)
-            #     with col4:
-            #         # st.pyplot(fig_2)
+            average_price = round(sum([i[1] for i in link_and_price]) / len(link_and_price), 2)
+            
+            with st.expander("ตัวอย่างการนำมาผลิตและส่งออกขาย"):
+                col3, col4 = st.columns(2)
+                with col4:
+                    if show_type == "shop":
+                        st.markdown(f"""
+                                    * {store_data[rock_type][items]["shop"][0]}
+                                    * {store_data[rock_type][items]["shop"][1]}
+                                    * {store_data[rock_type][items]["shop"][2]}
+                                    """)
+                    elif show_type == "map":
+                        st.markdown(f"""
+                        <iframe src="{store_data[rock_type][items]["map"]}"></iframe>
+                        """, unsafe_allow_html=True)
 
-            #     with col3:
-            #         st.markdown(f"""
-            #         #### {items}
-            #         <span style="color: #23B613"> ราคาสูงสุด : {max([i[1] for i in item_list])} บาท </span>
+                with col3:
+                    st.markdown(f"""
+                    #### {items}
+                    <a style="color: #23B613" href="{highest_price_link}"> ราคาสูงสุด : {highest_price} บาท </a>
 
-            #         <span style="color: #ff0000"> ราคาต่ำสุด : {min([i[1] for i in item_list])} บาท </span>
+                    <a style="color: #ff0000" href="{lowest_price_link}"> ราคาต่ำสุด : {lowest_price} บาท </a>
 
-            #         ราคาปัจจุบัน : {item_list[-1][1]} บาท
-
-            #         <span style="color: #008eff"> ราคาเฉลี่ย : {round(sum([i[1] for i in item_list]) / len(item_list), 2)} บาท </span>
-            #         """, unsafe_allow_html=True)
+                    <span style="color: #008eff"> ราคาเฉลี่ย : {average_price} บาท </span>
+                    """, unsafe_allow_html=True)
             
